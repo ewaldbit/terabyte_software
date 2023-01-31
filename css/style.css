@@ -73,6 +73,7 @@ nav.mobile-menu ul li{
 	padding: 8px 0;
 	border-bottom: 1px solid black;
 	transition: 1s;
+	
 }
 
 nav.mobile-menu ul li:hover{
@@ -82,6 +83,7 @@ nav.mobile-menu ul li:hover{
 nav.mobile-menu ul li a{
 	color: black;
 	text-decoration: none;
+	
 }
 
 header nav.desktop-menu ul{
