@@ -283,10 +283,21 @@ section.sessao2 section 1 .container{
 	background: white;
 }
 
+.scrollEquipe{
+	max-width: 510px;
+	padding-left: 20px;
+	padding-top: 6px;;
+	overflow: hidden;
+}
+
+.scrollWrapper{
+	width: 100%;
+}
+
 .sobre-autor{
 	float: left;
-	max-width: 510px;
-	padding-left: 30px;
+	width: 100%;
+	padding: 0 20px;
 }
 
 .titulo-autor{
@@ -316,8 +327,8 @@ section.sessao2 section 1 .container{
 	position: relative;
 	top: -4px;
 	float: left;
-	width: 75px;
-	height: 75px;
+	width: 70px;
+	height: 70px;
 	border-radius: 35px;
 	background-image: url(../imagens/Actor1.jpg);
 	background-size: 100% 100%;
@@ -338,7 +349,7 @@ section.sessao2 section 1 .container{
 	width: 100%;
 	float: left;
 	margin-top: 12px;
-	padding-left: 30px;
+	padding-left: 38px;
 }
 
 .slide-bullets span{
