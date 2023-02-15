@@ -1,7 +1,25 @@
+
+$(function(){
+		$(".chamada1 h2").typed({
+            strings: ["Conectando pessoas ao mundo digital!"],
+            typeSpeed: 100,
+            loop: true,
+        });
+    });	
+
 window.onload = function(){
+
+
+
+
+
+
+
+
+	// google maps
 	var map;
 
-	function initialize(){
+	function initMap(){
 		var mapProp = {
 			center : new google.maps.LatLng(-10.255103361169692, -48.34271377512011),
 			scrollWheel:false,
@@ -30,8 +48,16 @@ window.onload = function(){
 		infoWindow.open(map,marker)
 	}
 
-	initialize();
+	initMap();
 
 	var conteudo = '<p style="color:black;font-size:15px;padding:10px 0;">Terabyte Software</p>';
 	addMarker(-10.256243562747958,-48.34275669046411,'',conteudo);
 }
+
+$(document).ready(function(){
+      $('.bxslider').bxSlider({
+      	auto: true,
+  		stopAutoOnClick: true,
+  		pager: true
+      });
+    });

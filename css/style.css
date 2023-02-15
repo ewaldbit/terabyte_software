@@ -106,21 +106,36 @@ header nav.desktop-menu li a:hover{
 }
 
 .chamada1{
-	max-width: 600px;
-	float: right;
-	margin: 110px 110px;
+	max-width: 676px;
+    float: right;
+    margin: 141px 5px;
+    background-color: #1f0c2e57;
+    border-radius: 20%;
+    padding: 30px 15px;
+    border: 1px solid rgb(15 12 12 / 37%);
 }
 
 .chamada1 h2{
-	font-weight: 300;
-	font-size: 40px;
+	font-weight: bold;
+	font-size: 35px;
 	color: white;
+	text-align: center;
 }
 
+
 .chamada1 p{
-	font-size: 15px;
-	color: white;
-	margin-top: 10px;
+	font-size: 19px;
+	font-weight: normal;
+	color: #ffd9cc;
+	margin-top: 1opx;
+	text-align: left;
+	padding: 13px 2px;
+}
+
+.chamada1 p span{
+	font-size: 24px;
+	font-weight: bold;
+	color: #ffa12b;
 }
 
 section.sessao1{
@@ -195,7 +210,7 @@ section.sessao2 section 1 .container{
 	padding-left: 2%;
 	padding-right: 2%;
 	background-color: white;
-	text-align: center;
+	text-align: justify;
 }
 
 .sessao2 .container {
@@ -213,12 +228,18 @@ section.sessao2 section 1 .container{
 	display: inline-block;
 }
 
+.sessao2 a{
+	position: relative;
+	z-index: 999999;
+}
+
 .sessao2 img{
 	position: relative;
-	top: 110px;
+	top: 30px;
 	width: 100%;
 	margin-top: -30px;
 }
+
 
 @media screen and (max-width: 830px){
 	.chamada1{
@@ -274,6 +295,7 @@ section.sessao2 section 1 .container{
 	font-size: 15px;
 	line-height: 35px;
 	margin-top: 10px;
+	text-align: justify;
 }
 
 .part2{
@@ -327,11 +349,18 @@ section.sessao2 section 1 .container{
 	position: relative;
 	top: -4px;
 	float: left;
-	width: 70px;
-	height: 70px;
+	width: 100px;
+	height: 100px;
 	border-radius: 35px;
-	background-image: url(../imagens/Actor1.jpg);
+/*	background-image: url(../imagens/Actor1.jpg);*/
 	background-size: 100% 100%;
+}
+
+.titulo-autor .img-autor img {
+	position: relative;
+	left: -20px;
+	max-width: 100px;
+	border-radius: 50%;
 }
 
 .texto-autor{
