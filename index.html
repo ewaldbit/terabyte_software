@@ -10,11 +10,12 @@
     />	 -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
 	<meta charset="utf-8" />
 	<meta name="description" content="Site Institucional de informações gerais da empresa e contato">
-	<meta name="keywords" content="Sistemas Informação ">
+	<meta name="keywords" content="Sistemas Informação sites Institucional landing pages">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
 </head>
 <body>
@@ -40,7 +41,7 @@
 			</nav>
 			<div class="clear"></div><!--clear-->
 			<div class="chamada1">
-				<h2>Conectando Pessoas ao Mundo Digital!</h2><br>
+				<h2>Conectando Pessoas ao Universo Digital!</h2><br>
 				<p><span>Por que?</span> Criamos artes para que você ame e desfrute!</p>
 				<p><span>Como?</span> Fazemos o que amamos para que o produto final supere suas expectativas! </p>
 				<p><span>O que?</span> Sistemas de Informação personalizados, especiais e essenciais. </p>
@@ -59,7 +60,8 @@
 					<li>Lojas Vituais</li>
 					<li>SEO</li>
 					<li>Sistemas Administrativos</li>
-					<li>Consutoria em TI</li>
+					<li>LGPD</li>
+					<li>Consutoria em AWS</li>
 				</ul>
 				<div class="clear"></div>
 				<a href='#contato' style="text-decoration: none;"><div class="btn1-texto">Entre em contato</div></a><!--btn1-texto-->
@@ -81,12 +83,18 @@
 			Segue abaixo alguns links de templates que podemos implementar de imediato para o site de sua empresa:
 			<br><br>
 			</p>
-			<div class="bxslider"><!--Inicio slider container-->
-				<div><a href="https://ewaldbit.github.io/vendas_car/index.html" target="_blank"><img src="imagens/mockup1.png"></a></div>
-    			<div><a href="https://ewaldbit.github.io/odontosite/" target="_blank"><img src="imagens/mockup2.png"></a></div>
-    			<div><a href="https://ewaldbit.github.io/construturasite/" target="_blank"><img src="imagens/mockup3.png"></a></div>
-    		</div>
-    	</div><!--container-->
+			<div class="slider owl-carousel owl-theme">
+				<div class="item">
+  					<a href="https://ewaldbit.github.io/vendas_car/index.html" target="_blank"><img src="imagens/mockup1.png"></a>
+  				</div>
+  				<div class="item">	
+					<a href="https://ewaldbit.github.io/odontosite/" target="_blank"><img src="imagens/mockup2.png"></a>
+				</div>
+				<div class="item">
+				<a href="https://ewaldbit.github.io/construturasite/" target="_blank"><img src="imagens/mockup3.png"></a>
+    			</div>
+    		</div><!--owl-carousel-->
+		</div><!--container-->
 	</section><!--sessao2-->
 
 	<section class="sessao3">
@@ -181,17 +189,47 @@
 
 	<footer>
 		<div class="container">
-			<p>Todos os direitos reservados</p>
-			<p>ewaldbit@gmail.com</p>
+			<p>Todos os direitos reservados<br></p>
+/*			<p>ewaldbit@gmail.com</p>*/
 			<div class="clear"></div>
 		</div><!--container-->
 	</footer>
   	<script src="js/jquery.js"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  	<script src="js/owl/owl.carousel.min.js"></script>
   	<script src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
 	<script src="js/functions.js"></script>
-  	<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDut_IymcwsGaydF2p_gG0bzIx7nibVC3M&callback=initMap&v=weekly" defer></script>
+	<script>
+		function initMap(){
+			var mapProp = {
+				center : new google.maps.LatLng(-10.255103361169692, -48.34271377512011),
+				scrollWheel:false,
+				zoom:15,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			}
+			map = new google.maps.Map(document.getElementById("mapa"), mapProp);
+		}
+		function addMarker(lat,long,icon,content){
+			var LatLng = {'lat':lat,'lng':long};
+
+			var marker = new google.maps.Marker({
+				position:LatLng,
+				map:map,
+				icon:icon
+			});
+
+			var infoWindow = new google.maps.InfoWindow({
+				content:content,
+				maxWidth:200,
+				pixelOffSet: new google.maps.Size(0,20)
+			});
+
+			infoWindow.open(map,marker)
+		}
+		var conteudo = '<p style="color:black;font-size:15px;padding:10px 0;">Terabyte Software</p>';
+		addMarker(-10.256243562747958,-48.34275669046411,'',conteudo);
+	</script>
+  	<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDut_IymcwsGaydF2p_gG0bzIx7nibVC3M&callback=initMap&v=weekly"></script>
 	<script src="js/menu_responsivo.js"></script>
 	<script src="js/sliderEquipe.js"></script>
 	<script src="js/menuScroll.js"></script>

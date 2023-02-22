@@ -1,23 +1,35 @@
+$('.slider').owlCarousel({
+    items:1,
+    loop: true,
+    margin: 2,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    nav: true
+});
+
+$('.play').on('click', function () {
+    owl.trigger('play.owl.autoplay', [1000])
+})
+$('.stop').on('click', function () {
+    owl.trigger('stop.owl.autoplay')
+})
+
 
 $(function(){
 		$(".chamada1 h2").typed({
-            strings: ["Conectando pessoas ao mundo digital!"],
+            strings: ["Conectando pessoas ao universo digital!"],
             typeSpeed: 100,
             loop: true,
         });
-    });	
-
-window.onload = function(){
+    });
 
 
-
-
-
-
-
-
+/*window.onload = function(){
 	// google maps
 	var map;
+
+	initMap();
 
 	function initMap(){
 		var mapProp = {
@@ -27,7 +39,7 @@ window.onload = function(){
 			mapTypeId:google.maps.MapTypeId.ROADMAP
 		}
 
-		map = new google.maps.Map(document.getElementById("mapa"),mapProp);
+		map = new google.maps.Map(document.getElementById("map"), mapProp);
 	}
 
 	function addMarker(lat,long,icon,content){
@@ -48,16 +60,9 @@ window.onload = function(){
 		infoWindow.open(map,marker)
 	}
 
-	initMap();
-
+	
 	var conteudo = '<p style="color:black;font-size:15px;padding:10px 0;">Terabyte Software</p>';
 	addMarker(-10.256243562747958,-48.34275669046411,'',conteudo);
 }
 
-$(document).ready(function(){
-      $('.bxslider').bxSlider({
-      	auto: true,
-  		stopAutoOnClick: true,
-  		pager: true
-      });
-    });
+*/
